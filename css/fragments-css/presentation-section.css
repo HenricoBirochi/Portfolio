@@ -22,20 +22,17 @@
 
 #presentation-title h1 {
     font: var(--text-xlg);
+    margin-bottom: 10px;
 }
 
-#presentation-title h1:nth-child(2) {
-    background: linear-gradient(to bottom, var(--forth-brand-color), var(--third-brand-color), var(--second-brand-color));
+.gradient-background {
+    background: linear-gradient(to right, var(--forth-brand-color) 5%, var(--third-brand-color) 100%);
 
     -webkit-background-clip: text; /* Only useful for some browsers */
     background-clip: text;
 
     -webkit-text-fill-color: transparent; /* Only useful for some browsers */
     color: transparent;
-
-    font: var(--text-xlg);
-
-    margin-bottom: 10px;
 }
 
 #presentation-title span {
