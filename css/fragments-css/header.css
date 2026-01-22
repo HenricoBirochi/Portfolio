@@ -1,0 +1,32 @@
+header {
+    width: 100vw;
+    max-width: 100%;
+    padding-block: 20px;
+
+    background-color: var(--third-brand-color);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 65vw;
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+#page-title {
+    flex-grow: 1;
+}
+
+#page-title a {
+    font: var(--text-lg);
+}
+
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+
+    width: 18vw;
+}

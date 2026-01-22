@@ -1,0 +1,57 @@
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Product Colors 2134DE */
+    --brand-color: #061E29;
+    --second-brand-color: #1D546D;
+    --third-brand-color: #5F9598;
+    --forth-brand-color: #F3F4F4;
+    /* Text Colors */
+    --content-primary: #9CA3AF;
+    --content-secondary: #374151;
+    --content-tertiary: #313131;
+    /* Border Colors */
+    --border-primary: #D1D5DB;
+    --border-hover: #B9C2D0;
+    /* Font Family */
+    --first-font-family: "Google Sans Code", monospace;
+    /* Text Size Google */
+    --text-lg: 700 24px/32px var(--first-font-family);
+    --text-md: 600 18px/22px var(--first-font-family);
+    --text-sm: 500 16px/20px var(--first-font-family);
+    --text-sml: 500 14px/16px var(--first-font-family);
+}
+
+body {
+    color: var(--content-primary);
+    background-color: var(--brand-color);
+}
+
+h1 {
+    font: var(--text-lg);
+}
+
+a {
+    font: var(--text-md);
+    color: var(--content-secondary);
+    text-decoration: none;
+
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    color: var(--content-tertiary);
+    transform: scale(1.03) translateY(-5px);
+}
+
+p,
+span {
+    font: var(--text-sm);
+}
