@@ -1,0 +1,55 @@
+#presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-block: 60px;
+    margin-top: 20px;
+    margin-inline: 2.5vw;
+
+    border-radius: 8px;
+    background-color: var(--second-brand-color);
+
+    width: 95vw;
+    height: 360px;
+}
+
+#presentation-title {
+    text-align: center;
+
+    width: 40vw;
+}
+
+#presentation-title h1 {
+    font: var(--text-xlg);
+}
+
+#presentation-title h1:nth-child(2) {
+    background: linear-gradient(to bottom, var(--forth-brand-color), var(--third-brand-color), var(--second-brand-color));
+
+    -webkit-background-clip: text; /* Only useful for some browsers */
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent; /* Only useful for some browsers */
+    color: transparent;
+
+    font: var(--text-xlg);
+
+    margin-bottom: 10px;
+}
+
+#presentation-title span {
+    vertical-align: middle;
+}
+
+#presentation-title img {
+    width: 20px;
+    height: 20px;
+
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+#technologies {
+    margin-top: 40px;
+}

@@ -1,9 +1,17 @@
 header {
-    width: 100vw;
-    max-width: 100%;
+    width: 95vw;
     padding-block: 20px;
+    margin-top: 20px;
 
-    background-color: var(--third-brand-color);
+    position: fixed;
+    left: 2.5vw;
+    right: 2.5vw;
+    z-index: 1000;
+
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+
+    background-color: var(--second-brand-color);
 }
 
 header nav {
@@ -11,22 +19,22 @@ header nav {
     justify-content: space-between;
     align-items: center;
 
-    width: 65vw;
-    max-width: 100%;
+    width: 85vw;
     margin-inline: auto;
 }
 
 #page-title {
+    display: inline-flex;
     flex-grow: 1;
 }
 
 #page-title a {
-    font: var(--text-lg);
+    height: 45px;
 }
 
 #main-nav {
     display: flex;
     justify-content: space-between;
 
-    width: 18vw;
+    width: 22vw;
 }
