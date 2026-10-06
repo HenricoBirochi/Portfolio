@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henrico Birochi | Desenvolvedor Back-end Java</title>
+    <meta name="description" content="Portfólio de Henrico Birochi, desenvolvedor back-end Java com Spring Boot, APIs REST, SQL e Docker.">
+    <meta name="theme-color" content="#222831">
+
+    <!-- Aplica tema e idioma salvos antes de renderizar, evitando "piscar" -->
+    <script>
+        try {
+            document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark"
+            if (localStorage.getItem("lang") === "en") document.documentElement.lang = "en"
+        } catch {}
+    </script>
+
+    <!-- Ícone da aba: versão escura em navegador claro, versão clara em navegador escuro -->
+    <link rel="icon" type="image/svg+xml" href="./img/HB-Logo-dark.svg">
+    <link rel="icon" type="image/svg+xml" href="./img/HB-Logo.svg" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <nav aria-label="Navegação principal">
+            <div id="page-title">
+                <a href="#presentation" aria-label="Início"><img class="logo-light-theme" src="./img/HB-Logo-dark.svg" alt="Logo Henrico Birochi"><img class="logo-dark-theme" src="./img/HB-Logo.svg" alt="Logo Henrico Birochi"></a>
+            </div>
+            <div id="header-controls">
+                <button id="lang-toggle" class="icon-button" type="button" aria-label="Switch to English" title="Switch to English">EN</button>
+                <button id="theme-toggle" class="icon-button" type="button" aria-label="Ativar tema claro" title="Ativar tema claro">
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button id="menu-button" class="icon-button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div id="main-nav">
+                <a class="nav-link" href="#about" data-i18n="nav.about">Sobre</a>
+                <a class="nav-link" href="#experience" data-i18n="nav.experience">Experiência</a>
+                <a class="nav-link" href="#projects" data-i18n="nav.projects">Projetos</a>
+                <a class="nav-link" href="#skills" data-i18n="nav.skills">Competências</a>
+                <button id="contact-button" class="button-primary" type="button" data-i18n="nav.contact">Contato</button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="contact-container" role="dialog" aria-modal="true" aria-labelledby="contact-title" hidden>
+        <div id="contact">
+            <button id="contact-close" type="button" aria-label="Fechar">&times;</button>
+            <h2 id="contact-title" data-i18n="contact.title">Vamos conversar?</h2>
+            <p data-i18n="contact.text">Escolha a forma que preferir para entrar em contato.</p>
+            <div id="contact-links">
+                <a class="contact-link" href="https://www.linkedin.com/in/henricobirochi" target="_blank" rel="noopener">
+                    <img src="./img/icons/linkedin.svg" alt="">
+                    <span>LinkedIn</span>
+                </a>
+                <a class="contact-link" href="https://github.com/HenricoBirochi" target="_blank" rel="noopener">
+                    <img src="./img/icons/github.svg" alt="">
+                    <span>GitHub</span>
+                </a>
+                <a class="contact-link" href="mailto:henrico.birochi@gmail.com">
+                    <img src="./img/icons/mail.svg" alt="">
+                    <span>henrico.birochi@gmail.com</span>
+                </a>
+            </div>
+            <button id="copy-email" class="button-secondary" type="button" data-email="henrico.birochi@gmail.com" data-i18n="contact.copy">Copiar e-mail</button>
+        </div>
+    </div>
+
+    <main>
+        <section id="presentation">
+            <div id="presentation-title">
+                <span class="terminal-line"><img src="./img/icons/terminal.svg" alt=""> ~/henrico $ ./mvnw spring-boot:run</span>
+                <h1><span data-i18n="hero.greeting">Meu nome é</span><br><strong class="gradient-background">Henrico Birochi</strong></h1>
+                <p id="hero-role" class="gradient-background" data-i18n="hero.role">Desenvolvedor <span class="nowrap">Back-end</span> Java</p>
+                <p data-i18n="hero.text">
+                    Construo APIs REST e aplicações com <strong>Java</strong> e <strong>Spring Boot</strong>,
+                    com foco em código limpo, boas práticas e bancos de dados relacionais.
+                    <img class="inline-icon" src="./img/icons/coffee.svg" alt="">
+                </p>
+                <div id="presentation-actions">
+                    <a class="button-primary" href="#projects" data-i18n="hero.projects">Ver projetos</a>
+                    <a class="button-secondary" href="./docs/Curriculo_Henrico_Birochi.pdf" download data-i18n="hero.cv">Baixar CV</a>
+                    <button class="button-secondary open-contact" type="button" data-i18n="hero.contact">Fale comigo</button>
+                </div>
+            </div>
+            <ul id="main-stack" aria-label="Stack principal">
+                <li class="main-stack-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="">
+                    <div>
+                        <strong>Java</strong>
+                        <span data-i18n="hero.javaLabel">Linguagem principal</span>
+                    </div>
+                </li>
+                <li class="main-stack-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="">
+                    <div>
+                        <strong>Spring Boot</strong>
+                        <span>MVC, Data JPA, AOP</span>
+                    </div>
+                </li>
+            </ul>
+            <ul id="technologies" aria-label="Outras tecnologias">
+                <li><img class="icons-technologies" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL"></li>
+                <li><img class="icons-technologies" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" alt="SQL Server" title="SQL Server"></li>
+                <li><img class="icons-technologies" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" title="Docker"></li>
+                <li><img class="icons-technologies" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" title="Git"></li>
+                <li><img class="icons-technologies" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" title="AWS"></li>
+                <li><img class="icons-technologies" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" title="Python"></li>
+                <li><img class="icons-technologies" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="C#" title="C#"></li>
+                <li><img class="icons-technologies" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++"></li>
+            </ul>
+        </section>
+
+        <section id="about" class="reveal">
+            <h2 class="section-title"><span class="section-index">01.</span> <span data-i18n="about.title">Sobre</span></h2>
+            <div id="about-content">
+                <div id="about-text">
+                    <p data-i18n="about.p1">
+                        Sou desenvolvedor <strong>back-end</strong> com experiência prática em <strong>Java</strong>,
+                        <strong>Spring Boot</strong>, <strong>APIs REST</strong>, <strong>SQL</strong>, <strong>Docker</strong> e <strong>Git</strong>.
+                        Também atuo com sistemas corporativos e desenvolvimento web.
+                    </p>
+                    <p data-i18n="about.p2">
+                        Curso <strong>Engenharia da Computação</strong> e gosto de estudar o que deixa um sistema fácil de manter:
+                        <strong>POO</strong>, <strong>SOLID</strong> e <strong>Arquitetura Limpa</strong>.
+                    </p>
+                    <p data-i18n="about.p3">
+                        Já trabalhei de ponta a ponta: do levantamento e documentação de regras de negócio ao desenvolvimento,
+                        entrega e validação com o usuário.
+                    </p>
+                </div>
+                <dl id="about-facts">
+                    <div>
+                        <dt data-i18n="about.locationLabel">Localização</dt>
+                        <dd>São Bernardo do Campo, SP</dd>
+                    </div>
+                    <div>
+                        <dt data-i18n="about.educationLabel">Formação</dt>
+                        <dd data-i18n="about.education">Engenharia da Computação<br><small>Faculdade Engenheiro Salvador Arena · 2023 – 2027</small></dd>
+                    </div>
+                    <div>
+                        <dt data-i18n="about.languagesLabel">Idiomas</dt>
+                        <dd data-i18n="about.languages">Português (nativo)<br>Inglês (intermediário · Cambridge B1)</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <section id="experience" class="reveal">
+            <h2 class="section-title"><span class="section-index">02.</span> <span data-i18n="experience.title">Experiência</span></h2>
+            <ol id="timeline">
+                <li class="timeline-item">
+                    <div class="timeline-header">
+                        <h3><span data-i18n="experience.metagal.role">Estagiário de TI</span> <span class="company">@ Metagal</span></h3>
+                        <span class="timeline-date">03/2026 – 08/2026</span>
+                    </div>
+                    <ul class="timeline-list">
+                        <li data-i18n="experience.metagal.i1">Programei em <strong>Baan 4GL</strong> no ERP <strong>Infor LN</strong>, corrigindo e adaptando regras de negócio e implementando novas lógicas em código legado em produção.</li>
+                        <li data-i18n="experience.metagal.i2">Criei automações com <strong>Python</strong> e <strong>Playwright</strong> e uma <strong>DSL com transpilador para Python</strong>, distribuída como executável para usuários sem conhecimento em Python.</li>
+                        <li data-i18n="experience.metagal.i3">Desenvolvi com <strong>n8n</strong> uma automação que lia arquivos, enviava os dados ao ERP e salvava no SharePoint, eliminando um processo manual.</li>
+                        <li data-i18n="experience.metagal.i4">Usei <strong>SQL</strong> para investigar incidentes, corrigir inconsistências de dados e gerar relatórios operacionais.</li>
+                    </ul>
+                    <ul class="tags">
+                        <li>Baan 4GL</li><li>Infor LN</li><li>Python</li><li>Playwright</li><li>SQL</li><li>n8n</li>
+                    </ul>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-header">
+                        <h3><span data-i18n="experience.mr.role">Estagiário de Desenvolvimento</span> <span class="company">@ MR Inovações</span></h3>
+                        <span class="timeline-date">06/2025 – 03/2026</span>
+                    </div>
+                    <ul class="timeline-list">
+                        <li data-i18n="experience.mr.i1">Desenvolvi e mantive aplicações web e <strong>APIs REST</strong> com <strong>Java</strong> e <strong>Spring Boot</strong>, além de Python com Flask e Django.</li>
+                        <li data-i18n="experience.mr.i2">Implementei funcionalidades de back-end e front-end aplicando <strong>POO</strong>, padrão <strong>MVC</strong> e boas práticas de código.</li>
+                        <li data-i18n="experience.mr.i3">Containerizei serviços com <strong>Docker</strong> e participei de provas de conceito com <strong>AWS</strong> voltadas à disponibilidade e escalabilidade.</li>
+                    </ul>
+                    <ul class="tags">
+                        <li>Java</li><li>Spring Boot</li><li>APIs REST</li><li>Python</li><li>Docker</li><li>AWS</li>
+                    </ul>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-header">
+                        <h3><span data-i18n="experience.tg.role">Atirador</span> <span class="company">@ Tiro de Guerra 02-078</span></h3>
+                        <span class="timeline-date">02/2024 – 11/2024</span>
+                    </div>
+                    <ul class="timeline-list">
+                        <li data-i18n="experience.tg.i1">Serviço militar concluído. Fui corneteiro oficial em cerimônias e atirador destaque em agosto, experiência que reforçou disciplina e responsabilidade.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section id="projects" class="reveal">
+            <h2 class="section-title"><span class="section-index">03.</span> <span data-i18n="projects.title">Projetos</span></h2>
+            <div id="projects-grid">
+                <article class="project-card featured">
+                    <h3><a href="https://github.com/HenricoBirochi/Petshop-Spring-MVC" target="_blank" rel="noopener">PetShop Website</a></h3>
+                    <p data-i18n="projects.petshop">E-commerce feito em equipe com CRUD de produtos, carrinho, pedidos, upload de imagens e autenticação. Back-end em MVC com Spring Data JPA, PostgreSQL e controle de acesso por perfis com Spring AOP.</p>
+                    <ul class="tags">
+                        <li>Java 21</li><li>Spring MVC</li><li>Spring Data JPA</li><li>Spring AOP</li><li>PostgreSQL</li><li>Thymeleaf</li><li>Docker</li>
+                    </ul>
+                </article>
+                <article class="project-card featured">
+                    <h3><a href="https://github.com/HenricoBirochi/Voyager-People-Management" target="_blank" rel="noopener">Voyager People Management</a></h3>
+                    <p data-i18n="projects.voyager">Gerenciamento de cargos, departamentos, funcionários, registros de ponto e relatórios. Estruturado em Controllers, Services e Repositories, com ambiente local containerizado.</p>
+                    <ul class="tags">
+                        <li>Java 21</li><li>Spring Boot</li><li>PostgreSQL</li><li>Thymeleaf</li><li>Docker</li>
+                    </ul>
+                </article>
+                <article class="project-card featured">
+                    <h3>
+                        <a href="https://github.com/HenricoBirochi/Tasks-API" target="_blank" rel="noopener">Tasks API</a>
+                        <span class="badge" data-i18n="projects.wip">em desenvolvimento</span>
+                    </h3>
+                    <p data-i18n="projects.tasks">API REST para gerenciamento de tarefas, criada para praticar Clean Architecture: organização em domínio, casos de uso e infraestrutura.</p>
+                    <ul class="tags">
+                        <li>Java 21</li><li>Spring Boot</li><li>Clean Architecture</li><li>SOLID</li><li>Spring Data JPA</li><li>PostgreSQL</li>
+                    </ul>
+                </article>
+                <article class="project-card">
+                    <h3 data-i18n="projects.iotTitle">Monitoramento IoT de Temperatura, Umidade e Luminosidade</h3>
+                    <p data-i18n="projects.iot">Sensores com firmware em C++ para Arduino e aplicação em ASP.NET Core MVC integrada ao FIWARE na AWS, com SQL Server e visualização das medições.</p>
+                    <ul class="tags">
+                        <li>C++</li><li>Arduino</li><li>C#</li><li>ASP.NET Core</li><li>FIWARE</li><li>AWS</li><li>SQL Server</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/HenricoBirochi/HephaiTech" target="_blank" rel="noopener" data-i18n="projects.iotWeb">Aplicação Web</a>
+                        <a href="https://github.com/HenricoBirochi/Environmental-Conditions-Measurer" target="_blank" rel="noopener">Firmware C++</a>
+                    </div>
+                </article>
+            </div>
+            <a class="see-more" href="https://github.com/HenricoBirochi?tab=repositories" target="_blank" rel="noopener" data-i18n="projects.more">Ver todos no GitHub &rarr;</a>
+        </section>
+
+        <section id="skills" class="reveal">
+            <h2 class="section-title"><span class="section-index">04.</span> <span data-i18n="skills.title">Competências</span></h2>
+            <div id="skills-grid">
+                <div class="skill-group highlight">
+                    <h3 data-i18n="skills.main">Principal</h3>
+                    <ul class="tags">
+                        <li>Java</li><li>Spring Boot</li><li>Spring MVC</li><li>Spring Data JPA</li><li>Spring AOP</li><li>APIs REST</li><li>Thymeleaf</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3 data-i18n="skills.fundamentals">Fundamentos</h3>
+                    <ul class="tags">
+                        <li data-i18n="skills.oop">POO</li><li>SOLID</li><li data-i18n="skills.clean">Arquitetura Limpa</li><li data-i18n="skills.ds">Estruturas de Dados</li><li data-i18n="skills.algorithms">Algoritmos</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3 data-i18n="skills.databases">Bancos de dados</h3>
+                    <ul class="tags">
+                        <li>PostgreSQL</li><li>SQL Server</li><li data-i18n="skills.modeling">Modelagem relacional</li><li>SQL / T-SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3 data-i18n="skills.tools">Ferramentas e Cloud</h3>
+                    <ul class="tags">
+                        <li>Docker</li><li>AWS</li><li>Git</li><li>GitHub</li><li>n8n</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3 data-i18n="skills.languages">Outras linguagens</h3>
+                    <ul class="tags">
+                        <li>Python</li><li>C#</li><li>C++</li><li>JavaScript</li><li>Baan 4GL</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3 data-i18n="skills.frameworks">Outros frameworks</h3>
+                    <ul class="tags">
+                        <li>Flask</li><li>Django</li><li>Playwright</li><li>ASP.NET Core MVC</li><li>EF Core</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="reveal">
+            <h2 data-i18n="cta.title">Vamos trabalhar juntos?</h2>
+            <p data-i18n="cta.text">Estou aberto a oportunidades como desenvolvedor back-end Java.</p>
+            <div id="cta-actions">
+                <button class="button-primary open-contact" type="button" data-i18n="hero.contact">Fale comigo</button>
+                <a class="button-secondary" href="./docs/Curriculo_Henrico_Birochi.pdf" download data-i18n="hero.cv">Baixar CV</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><span data-i18n="footer.made">Feito com</span> <img class="inline-icon" src="./img/icons/coffee.svg" alt="☕"> <span data-i18n="footer.by">por</span> Henrico Birochi &copy; <span id="year">2026</span></p>
+    </footer>
+
+    <script src="./js/i18n.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

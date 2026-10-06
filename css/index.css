@@ -1,5 +1,10 @@
 @import url(./global.css);
 @import url(./fragments-css/main.css);
 @import url(./fragments-css/header.css);
+@import url(./fragments-css/contact.css);
 @import url(./fragments-css/presentation-section.css);
 @import url(./fragments-css/about-section.css);
+@import url(./fragments-css/experience-section.css);
+@import url(./fragments-css/projects-section.css);
+@import url(./fragments-css/skills-section.css);
+@import url(./fragments-css/footer.css);
